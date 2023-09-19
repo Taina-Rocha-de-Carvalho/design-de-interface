@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       html, body{
+        font-size: 16px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="cartão">
+        <h1 class="titulo">taina</h1>
+        <div class="corpo">
+            <img src="download.jfif" alt="imagem do cartao" class="imagem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Unde est, officiis excepturi ullam laborum minima eaque in quisquam.</p>
+        </div>
+        <footer class="rodape"></footer>
+    </div>
+</body>
+
+</html>
