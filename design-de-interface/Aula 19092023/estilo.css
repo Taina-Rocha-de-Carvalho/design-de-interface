@@ -1,0 +1,75 @@
+html,
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cartão {
+    width: 12.6rem;
+    height: 27.3rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: .7rem;
+    border-radius: .1rem #c9c7c7 solid;
+    /*offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(19, 51, 168, 0.2);
+}
+
+.titulo {
+    margin: 0 0 1rem 0;
+}
+
+.imagem {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    color: white;
+    padding: .3rem 2rem;
+    background-color: blue;
+    border: none;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cartão {
+    width: 12.6rem;
+    height: 27.3rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: .7rem;
+    border-radius: .1rem #c9c7c7 solid;
+    /*offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(177, 11, 135, 0.2);
+}
+
+.titulo {
+    margin: 0 0 1rem 0;
+}
+
+.imagem {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    color: white;
+    padding: .3rem 2rem;
+    background-color: blue;
+    border: none;
+}
