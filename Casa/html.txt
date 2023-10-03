@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>imagem</title>
+        <style> 
+        div { height: 29rem;
+            width: 26rem;
+            border: 2px green solid;
+            margin: 3rem auto;
+        padding: .2rem;
+    text-align: center;}
+        img { height: 28rem;
+            width: 25rem;
+            border: 2px red solid;
+            margin: .3rem auto;}
+        </style>
+    </head><body>
+        <div>
+        <img src="casa.png"
+        alt="casa"
+        height="300rem"
+        width="270rem"/>
+        </div>
+    </body></html>
