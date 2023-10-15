@@ -1,0 +1,42 @@
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.painel {
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+.cartao {
+    width: 12.6rem;
+    height: 27.3rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: .7rem;
+    border: .1rem #0a0d56 solid;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(29, 21, 105, 0.2);
+}
+
+.titulo {
+    margin: 0 0 1rem 0;
+}
+
+.taina {
+    width: 6rem;
+    height: 12rem;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    color: rgb(41, 28, 28);
+    padding: .3rem 2rem;
+    background-color: rgb(32, 14, 52);
+    border: none;
+}
+
