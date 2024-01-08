@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Preços dos Produtos em uma Lanchonete</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Produtos</h1>
+    
+<h2>Salgados</h2>
+<section><div class="produto">
+    <div class="produtoImagem"><img src="coxinha.webp" alt="salgado" height="135"></div>
+    <div class="detalhes"><p>Coxinha</p><span class="preço">R$ 2,50</span></div></div>
+
+    <div class="produto">
+    <div class="produtoImagem"><img src="empadas.jpg" alt="empadas" height="135"></div>
+    <div class="detalhes"><p>Empadas</p><span class="preço">R$ 2,00</span></div></div>
+
+    <div class="produto">
+    <div class="produtoImagem"><img src="pastel.jpg" alt="salgado" height="135"></div>
+    <div class="detalhes"><p>Pastel</p><span class="preço">R$ 1,50</span></div></div>
+</section>
+
+<h2>Doces</h2>
+<section><div class="produto">
+    <div class="produtoImagem"><img src="bolos.jpg" alt="bolos" height="135"></div>
+    <div class="detalhes"><p>Bolo</p><span class="preço">R$ 5,00</span></div></div>
+    
+    <div class="produto">
+    <div class="produtoImagem"><img src="biscoitos.jpg" alt="biscoitos" height="135"></div>
+    <div class="detalhes"><p>Biscoitos</p><span class="preço">R$ 2,00</span></div></div>
+
+    <div class="produto">
+    <div class="produtoImagem"><img src="torta.jpg" alt="torta" height="135"></div>
+    <div class="detalhes"><p>Torta</p><span class="preço">R$ 5,00</span></div></div>
+</section>
+
+<h2>Sucos</h2>
+<section><div class="produto">
+    <div class="produtoImagem"><img src="suco de laranja.jpg" alt="suco" height="135"></div>
+    <div class="detalhes"><p>Suco de Laranja</p><span class="preço">R$ 3,00</span></div></div>
+
+    <div class="produto"><div class="produtoImagem">
+    <img src="suco de melancia.jpg" alt="suco" height="135"></div>
+    <div class="detalhes"><p>Suco de Melancia</p><span class="preço">R$ 4,50</span></div></div>
+    
+    <div class="produto"><div class="produtoImagem">
+    <img src="sucodemonagos.jpg" alt="suco" height="135"></div>
+    <div class="detalhes"><p>Suco de Morango</p><span class="preço">R$ 2,00</span></div></div>
+</section>
+
+<h2>Refrigerantes</h2>
+<section><div class="produto">
+    <div class="produtoImagem"><img src="fanta.jpg" alt="refri" height="135"></div>
+    <div class="detalhes"><p>Fanta</p><span class="preço">R$ 4,00</span></div></div>
+
+    <div class="produto">
+    <div class="produtoImagem"><img src="coca cola.jpeg" alt="refri" height="135"></div>
+    <div class="detalhes"><p>Coca-Cola</p><span class="preço">R$ 5,00</span></div></div>
+
+    <div class="produto">
+    <div class="produtoImagem"><img src="sprite.jpg" alt="refri" height="135"></div>
+    <div class="detalhes"><p>Sprite</p><span class="preço">R$ 4,50</span></div></div>
+</section>
+
+
+<h1>Calculando o Preço e o Troco</h1>
+
+<p><label for="valorCompra">Valor total da compra:</label>
+    <input type="text" id="valorCompra" placeholder="Digite o valor da compra"></p>
+
+<p><label for="valorPago">Valor que foi pago:</label>
+    <input type="text" id="valorPago" placeholder="Digite o valor pago"></p>
+
+<p><button onclick="calcularTroco()">Calcular Troco</button><div id="resultado"></div></p>
+
+<script>function calcularTroco() {
+    var valorCompra = parseFloat(document.getElementById('valorCompra').value);
+    var valorPago = parseFloat(document.getElementById('valorPago').value);
+
+    if (isNaN(valorCompra) || isNaN(valorPago) || valorPago < valorCompra) {
+    document.getElementById('resultado').innerHTML = "Quantia insuficiente para realizar a compra";
+    } else {var troco = valorPago - valorCompra;
+        var notas = [50, 20, 10, 5, 2, 1];
+        var resultadoTroco = "Troco: R$ " + troco.toFixed(2) + "<br>";
+
+    for (var i = 0; i < notas.length; i++) {
+        var quantidadeNotas = Math.floor(troco / notas[i]);troco = troco % notas[i];
+        resultadoTroco += "Notas de R$ " + notas[i] + ": " + quantidadeNotas + "<br>";}
+        document.getElementById('resultado').innerHTML = resultadoTroco;}}
+</script></body></html>
