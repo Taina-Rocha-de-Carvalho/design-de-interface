@@ -1,0 +1,86 @@
+body{
+    margin-right: 1rem;
+    padding: 1px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;}
+
+header{
+    color: white;
+    background-color: #ffbbdd;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Times New Roman';
+    font-style: italic;}
+
+
+nav{
+    background-color: #f0b0d0;
+    font-family: Tahoma;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;}
+
+.logoImg{
+    background-position: right;
+    margin-right: 10rem;
+}
+
+ul{
+    background-color: #f0b0d0;
+    font-family: Tahoma;
+    font-size: larger;
+    list-style-type: none;
+    display: flex;    justify-content: flex-start;}
+
+a{ 
+    text-decoration: none;
+    color: white;}
+
+li{ margin-right: 1rem;}
+
+
+section{
+    display: flex;
+    justify-content: center;}
+
+
+form {
+        display: inline-block;
+        text-align: left;}
+    
+label {
+        display: block;
+        margin-bottom: 5px;}
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tipoContato"],
+    input[type="mensagem"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;}
+
+    input[type="checkbox"],
+    input[for="confirmar"] { justify-content: flex-start;}
+
+    input[type="confirmar"] {
+        background-color: #ffbbdd;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;}
+
+    input[type="button"] {
+        width: 25%;
+        padding: 10px;
+        margin-bottom: 15px;
+        background-color: #ffbbdd;
+        color: white;
+        justify-content: center;
+}
+
+footer{
+    background-color:#ffbbdd;
+    display: flex;
+    justify-content: center;}
