@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Calculos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vamoscalcular.css">
+</head>
+
+<body>
+    <h1>Vamos calcular</h1>
+
+    <h2>1- Calculando sua Idade</h2>
+    <p>formula : 2050 - numero = X anos</p>
+    <p>Em que ano voce nasceu:
+        <input type="text" id="anoNascimento" placeholder="Ex:2000" oninput="calcularIdade()" />
+    </p>
+    <p>Em 2050 você terá ... :<span id="idade2050"></span>anos</p>
+
+    <script type="text/javascript">
+        function calcularIdade() {
+            var anoNascimento = parseInt(document.getElementById('anoNascimento').value);
+            var ano2050 = 2050;
+            var idade2050 = ano2050 - anoNascimento;
+            document.getElementById('idade2050').innerText = idade2050;
+        }</script>
+
+    <h2>2- Calculando 25% do salário</h2>
+    <p>formula : .... </p>
+    <p>Coloque um numero para o salário:
+        <input type="text" id="salario" placeholder="Ex:1200" oninput="calcularSalarioAumento()" />
+    </p>
+    <p>Esse salário com 25% de aumento é: <span id="salarioAumento"></span></p>
+
+    <script type="text/javascript">
+        function calcularSalarioAumento() {
+            var salario = parseFloat(document.getElementById('salario').value);
+            var aumento = salario * 0.25;
+            var salarioTotal = salario + aumento;
+            document.getElementById('salarioAumento').innerText = salarioTotal;
+        }</script>
+
+    <h2>3- Calculando Celsius em Fahrenheit</h2>
+    <p>formula : F° = (C° * 1,8) + 32</p>
+    <p>Indique uma temperatura qualquer em Celcius:
+        <input type="text" id="temperaturaCelsius" oninput="calcularFahrenheit()" />
+    </p>
+    <p> em Fahrenheit a temperatura é :<span id="temperaturaFahrenheit"></span></p>
+
+    <script type="text/javascript">
+        function calcularFahrenheit() {
+            var temperaturaCelsius = parseFloat(document.getElementById('temperaturaCelsius').value);
+            var temperaturaFahrenheit = (temperaturaCelsius * 1.8) + 32;
+            document.getElementById('temperaturaFahrenheit').innerText = temperaturaFahrenheit.toFixed(2);
+        }</script>
+
+    <h2>4- Calculando a média aritmética des três notas</h2>
+    <p>formula : M = numero + numero + ... / quantidade de numeros inseridos</p>
+    <p> Coloque até 3 numeros aleatorios (separados por vírgula):
+        <input type="text" id="numeros" oninput="calcularMedia()" />
+    </p>
+    <p> A média aritmética dos numeros é:<span id="media"></span></p>
+
+    <script type="text/javascript"> function calcularMedia() {
+            var numerosInput = document.getElementById('numeros').value;
+            var numerosArray = numerosInput.split(',').map(Number);
+            var total = 0;
+            for (var i = 0; i < numerosArray.length; i++) { total += numerosArray[i]; }
+            var media = total / numerosArray.length;
+            if (!isNaN(media)) { document.getElementById('media').innerText = media.toFixed(2); }
+            else { document.getElementById('media').innerText = 'Informe números'; }
+        }</script>
+
+    <h2>5- Calculando o Teorema de Pitágoras</h2>
+    <img src="escaleno.png" alt="escaleno" height="135">
+    <p>formula : c² = a² + b²</p>
+    <p>Coloque 2 valores para os catetos do triângulo acima (catetos a & b):
+        <input type="text" id="catetos" placeholder="Ex:3,4" oninput="calcularTeoremaPitagoras()" />
+    </p>
+    <p>O valor da hipotenusa (cateto C) é: <span id="hipotenusa"></span></p>
+
+    <script type="text/javascript">
+        function calcularTeoremaPitagoras() {
+            var catetosInput = document.getElementById('catetos').value;
+            var catetosArray = catetosInput.split(',').map(Number);
+
+            if (catetosArray.length === 2 && !isNaN(catetosArray[0]) && !isNaN(catetosArray[1])) {
+                var catetoA = catetosArray[0];
+                var catetoB = catetosArray[1];
+
+                var hipotenusa = Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
+                document.getElementById('hipotenusa').innerText = hipotenusa.toFixed(2);
+            } else {
+                document.getElementById('hipotenusa').innerText = 'Informe 2 números para os catetos A e B';
+            }
+        }
+    </script>
+
+    <h2>6- Calculando o comprimento, área e volume de uma esfera</h2>
+    <img src="esfera.jpg" alt="esfera" height="135">
+    <p>formula do comprimento, area e volume: (C = 2 * π * r) (A = π * r²) (V = 3⁄4 * π * r³)</p>
+    <p>Adcione um valor qualquer para o raio (letra r):
+        <input type="text" id="raio" oninput="calcularComprimento(); calcularArea(); calcularVolume()" />
+    </p>
+    <p>O valor do comprimento é: <span id="comprimento" placeholder="formula : C = 2 * π * r"> </span></p>
+    <p>O valor da área é: <span id="area" placeholder="formula : A = π * r²"></span></p>
+    <p>O valor do volume é: <span id="volume" placeholder="formula : V = 3⁄4 * π * r³"></span></p>
+
+    <script type="text/javascript">
+        function calcularComprimento() {
+            var raio = parseFloat(document.getElementById('raio').value);
+            var comprimento = 2 * Math.PI * raio;
+            document.getElementById('comprimento').innerText = comprimento.toFixed(2);
+        }
+
+        function calcularArea() {
+            var raio = parseFloat(document.getElementById('raio').value);
+            var area = Math.PI * Math.pow(raio, 2);
+            document.getElementById('area').innerText = area.toFixed(2);
+        }
+
+        function calcularVolume() {
+            var raio = parseFloat(document.getElementById('raio').value);
+            var volume = (3 / 4) * Math.PI * Math.pow(raio, 3);
+            document.getElementById('volume').innerText = volume.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

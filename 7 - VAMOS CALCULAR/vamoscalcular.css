@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(237, 229, 244);
+    color:black ;
+    margin: 5px;
+    border-style: hidden; /* tipo de bordar /*/
+    padding: 50px; /* espaço a esquerda da tela /*/
+    box-sizing: border-box;
+    }
+
+.h1 { 
+    font-size: 30px; /* tamanho da font /*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.h2 {
+    font-size: 20px; /* tamanho da font /*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.p {
+    font-size: 15px; /* tamanho da font /*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img{
+    border-style: hidden; /* tipo de bordar /*/
+    width: 300px;
+    height: 280px;
+    padding: 50px;
+}
