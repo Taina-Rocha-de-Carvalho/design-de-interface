@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Animação2(2)</title>
+    <meta chatset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <style>
+        html, body {
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: rgb(255, 255, 255)}
+
+        main {
+            position: relative;
+            top: 5px;
+            left: 5px;
+            width: 30rem;
+            height: 20rem;
+            margin: 8rem auto;
+            border: 8px rgb(123,77,40) solid;
+            background-image: url("ceu.jpg");
+            background-size: cover;
+            overflow: hidden;}
+
+        #beija-flor {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-image: url("beija-flor.png");
+            background-size: cover; /* Ajusta o tamanho da imagem */
+            background-position: center; /* Centraliza a imagem */
+            animation-name: movimento;
+            animation-duration: 8s;
+            animation-timing-function: cubic-bezier (0.05, 0.76, 0.6, 0.670);
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+        }
+
+        @keyframes movimento {
+            0% {
+                left: -100px;
+                top: 40px;
+            }
+
+            25% {
+                left: 250px;
+                top: 55px;
+            }
+
+            50% {
+                left: -73px;
+                top: 100px;
+            }
+
+            75% {
+                left: 30px;
+                top: 153px;
+            }
+
+            100% {
+                left: 500px;
+                top: -900px;
+            }}
+    </style> </head>
+<body>
+    <main>
+        <div id="beija-flor"></div>
+    </main>
+</body>
+</html>
